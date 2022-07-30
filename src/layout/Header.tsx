@@ -18,13 +18,16 @@ export const Header: FC = () => {
         ]
       : [
           { href: pagesPath.$url().pathname, label: "Root" },
+          {
+            href: pagesPath.publicTodo.$url().pathname,
+            label: "公開されているTodo",
+          },
           { href: pagesPath.signIn.$url().pathname, label: "ログイン" },
         ];
   }, [isAuth]);
 
   return (
     <div>
-      <h1>Title</h1>
       <nav>
         {items.map(({ href, label }) => {
           return (

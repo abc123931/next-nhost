@@ -1,4 +1,7 @@
 export const pagesPath = {
+  "publicTodo": {
+    $url: (url?: { hash?: string }) => ({ pathname: '/publicTodo' as const, hash: url?.hash })
+  },
   "signIn": {
     $url: (url?: { hash?: string }) => ({ pathname: '/signIn' as const, hash: url?.hash })
   },
